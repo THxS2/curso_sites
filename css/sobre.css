@@ -48,3 +48,57 @@ nav a:hover {
     background: #fff;
     color: #491552 !important;
 }
+
+main section {
+    background: #fff;
+    margin: 40px auto;
+    padding: 30px 20px;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+h1 {
+    color: #491552;
+    margin-bottom: 16px;
+}
+
+ul {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+footer {
+    background: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+    font-size: 0.95em;
+}
+
+/* Adicione ao final do seu CSS, por exemplo em sobre.css e home.css */
+
+/* Responsividade para telas menores */
+@media (max-width: 700px) {
+    main section {
+        padding: 18px 5vw;
+        max-width: 98vw;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .btn-destaque {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    ul {
+        max-width: 95vw;
+    }
+}
