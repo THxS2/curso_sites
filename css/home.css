@@ -40,8 +40,8 @@ nav a:hover {
 
 /* Estilo para o botão de destaque */
 .btn-destaque {
-    background: #fff;
-    color: #0057b8 !important;
+    background: #000;
+    color: #fff !important;
     border: none;
     font-weight: bold;
     transition: background 0.2s, color 0.2s;
