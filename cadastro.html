@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Curso para Aprender Fazer Sites</title>
+    <link rel="stylesheet" href="css/sobre.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Cadastro</h1>
+            <form action="#" method="post" class="form-cadastro">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required maxlength="14" placeholder="000.000.000-00">
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required maxlength="9" placeholder="00000-000">
+
+                <button type="submit" class="btn-destaque">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Curso de Desenvolvimento Web. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
