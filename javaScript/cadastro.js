@@ -38,3 +38,33 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ... (validação de CPF e CEP do exemplo anterior)
+
+    // Preencher endereço automaticamente pelo CEP
+    const cepInput = document.getElementById('cep');
+    const enderecoInput = document.getElementById('endereco');
+
+    if (cepInput && enderecoInput) {
+        cepInput.addEventListener('blur', function() {
+            const cep = cepInput.value.replace(/\D/g, '');
+            if (cep.length === 8) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            enderecoInput.value = `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`;
+                        } else {
+                            enderecoInput.value = '';
+                            alert('CEP não encontrado.');
+                        }
+                    })
+                    .catch(() => {
+                        enderecoInput.value = '';
+                        alert('Erro ao buscar o CEP.');
+                    });
+            }
+        });
+    }
+});
